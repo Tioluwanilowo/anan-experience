@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANAN Experience - Coming Soon</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="hidePreloader()">
+    <!-- Preloader (Only One) -->
+    <div id="preloader">
+      <img src="ANAN White logo.png" alt="Anan Logo" id="loading-logo" />
+    </div>
+
+    <!-- Main Content (Hidden Initially) -->
+    <div class="container" id="main-content">
+      <header>
+        <img
+          src="ANAN White logo.png"
+          alt="Anan Experience Logo"
+          class="logo"
+        />
+      </header>
+
+      <div class="content">
+        <span class="coming-soon">🚀 Coming Soon</span>
+        <h1>Join The Waitlist</h1>
+
+        <div class="typing-container">
+          <p id="typing-text"></p>
+        </div>
+
+        <form id="waitlist-form" class="waitlist-form">
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+
+        <!-- Success Message -->
+        <p
+          id="success-message"
+          style="display: none; color: rgb(254, 255, 254)"
+        >
+          ✅ Successfully added to the waitlist!
+        </p>
+        <p id="error-message" style="display: none; color: red">
+          ❌ Something went wrong. Try again.
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

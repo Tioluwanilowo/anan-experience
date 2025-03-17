@@ -1,0 +1,144 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+/* Preloader Styling */
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: black; /* Background while loading */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensures it stays above everything */
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+#preloader.hidden {
+  opacity: 0;
+  pointer-events: none; /* Ensures no interaction after hiding */
+}
+
+/* Spinning Logo Animation */
+#loading-logo {
+  width: 120px; /* Adjust logo size */
+  height: auto;
+  animation: spin 2s linear infinite;
+}
+
+/* Spinning Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hide Main Content Initially */
+#main-content {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: url("./images/ananbg.png") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  max-width: 90%;
+  width: 600px;
+  padding: 20px;
+}
+
+header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000; /* Ensures it stays above other elements */
+}
+
+.logo {
+  width: 200px; /* Adjust as needed */
+  height: auto; /* Keeps aspect ratio */
+}
+
+.coming-soon {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 16px;
+  margin: 10px 0 20px;
+}
+
+.waitlist-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.waitlist-form input {
+  width: 70%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.waitlist-form button {
+  width: 25%;
+  padding: 12px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.waitlist-form button:hover {
+  background: #ffcc00;
+  color: black;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 28px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .waitlist-form input {
+    width: 100%;
+  }
+  .waitlist-form button {
+    width: 100%;
+  }
+}
