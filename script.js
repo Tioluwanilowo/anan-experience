@@ -74,3 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Auto-update footer year
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("year").textContent = new Date().getFullYear();
+});
