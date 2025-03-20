@@ -154,10 +154,6 @@ body {
   flex-direction: column;
 }
 
-/* .container {
-  flex: 1;
-} */
-
 /* Responsive Styles */
 @media (max-width: 600px) {
   h1 {
